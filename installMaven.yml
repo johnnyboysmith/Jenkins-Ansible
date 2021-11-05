@@ -1,0 +1,12 @@
+---
+-hosts: My_Group
+ tasks:
+   -name: Install Maven Using Ansible
+   become: yes
+   apt:
+     name: "{{ packages }}"
+     state: present
+   vars:
+     packages:
+       -maven
+...

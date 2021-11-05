@@ -1,23 +1,11 @@
 pipeline {
-  agent any
+  agent ubuntu
 
   stages {
-    stage('Build') {
+    stage('Maven Build') {
       steps {
-        echo 'Building...'
+        echo 'ansible-playbook installMaven.yml'
       }
-    }
-   
-    stage('Test') {
-      steps {
-        echo 'Testing...'
-      }
-    }
-
-    stage('Deply') {
-      steps {
-        echo 'Deploying...'
-      }
-    }
+    } 
   }
 }
